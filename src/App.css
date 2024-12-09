@@ -1,0 +1,12 @@
+:root {
+    --base-clr: rgb(1, 1, 90), black;
+    --text-clr: #ffffff;
+    --input-clr: #e9f0f9;
+    --btn-clr: #6f42c1;
+    --btn-hover-clr: #5a32a1;
+}
+
+* {
+    font-family: Arial, sans-serif;
+    color: var(--text-clr);
+}
