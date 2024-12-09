@@ -1,31 +1,70 @@
+/* Slider Styling */
 .slider {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 10px;
-  padding: 10px;
+  gap: 20px;
+  padding: 20px;
+  background-color: transparent; /* Matches app background */
+  border-radius: 8px;
 }
 
+/* Card Styling */
 .card {
   flex: 0 0 300px;
   scroll-snap-align: center;
-  background-color: white;
+  background: rgba(50, 50, 150, 0.9); /* Brighter semi-transparent blue */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for separation */
   padding: 20px;
   text-align: left;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
+  height: 400px; /* Increased height for taller cards */
 }
 
 .card:hover {
   transform: scale(1.05);
+  background: rgba(60, 60, 170, 1); /* Slightly brighter on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
-h2 {
+/* Card Heading */
+.card h2 {
   margin-top: 0;
-  color: #333;
+  color: #ffffff; /* Text stands out against brighter background */
+  font-size: 1.5rem;
 }
 
-p {
-  color: #555;
+/* Card Text */
+.card p {
+  color: #f0f4ff; /* Softer text color for readability */
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Scrollbar Customization */
+.slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: #6f42c1;
+  border-radius: 10px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 80%;
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .main-h1 {
+    font-size: 2rem;
+  }
 }

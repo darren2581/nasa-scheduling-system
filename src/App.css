@@ -1,5 +1,5 @@
 :root {
-    --base-clr: rgb(1, 1, 90), black;
+    --base-clr: linear-gradient(135deg, rgb(1, 1, 90), black);
     --text-clr: #ffffff;
     --input-clr: #e9f0f9;
     --btn-clr: #6f42c1;
@@ -8,5 +8,10 @@
 
 * {
     font-family: Arial, sans-serif;
-    color: var(--text-clr);
+}
+
+.App{
+    background: var(--base-clr);
+    min-height: 100vh;
+    padding: 5px;
 }
